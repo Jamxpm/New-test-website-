@@ -1,152 +1,610 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>James Perez-Moran</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload landing">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>James Perez-Moran | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-		<div id="page-wrapper">
+    :root {
+      --bg: #f4f1ea;
+      --text: #f8f6f1;
+      --dark: #1d1d1b;
+      --muted: rgba(255, 255, 255, 0.78);
+      --soft-dark: #6f6b63;
+      --card: #ece7de;
+      --line: rgba(255, 255, 255, 0.28);
+      --accent: #d8d0c2;
+    }
 
-			<header id="header">
-				<h1 id="logo"><a href="index.html">James Perez-Moran</a></h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#one">About Me</a></li>
-						<li><a href="#two">Interests</a></li>
-						<li><a href="#three">Goals</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
 
-			<section id="banner">
-				<div class="content">
-					<header>
-						<h2>Hello and welcome!</h2>
-						<p>My name is James Perez-Moran and this website is about me.</p>
-					</header>
-					<img src="Resume photo.jpg" width="100" height="150" alt="My photo" />
-				</div>
-				<a href="#one" class="goto-next scrolly">Next</a>
-			</section>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.65;
+    }
 
-			<section id="one" class="spotlight style1 bottom">
-				<span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
-				<div class="content">
-					<div class="container">
-						<h2>About Me</h2>
-						<p>I am a student at Michigan State University studying Information Science with an interest in security, technology, and helping people through better systems.</p>
-						<p>I am interested in learning more about cybersecurity and management, and I want to keep building my skills for the future.</p>
-					</div>
-				</div>
-				<a href="#two" class="goto-next scrolly">Next</a>
-			</section>
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-			<section id="two" class="spotlight style2 right">
-				<span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
-				<div class="content">
-					<header>
-						<h2>My Interests</h2>
-					</header>
-					<p>I am interested in cybersecurity, healthcare security, and management. One of my main interests is protecting healthcare information and understanding how security and management work together in healthcare organizations.</p>
-					<p>I also like learning about technology support, digital systems, and how to solve problems in a real-world setting.</p>
-				</div>
-				<a href="#three" class="goto-next scrolly">Next</a>
-			</section>
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-			<section id="three" class="spotlight style3 left">
-				<span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
-				<div class="content">
-					<header>
-						<h2>My Goals</h2>
-					</header>
-					<p>My goal is to build a career in cybersecurity or healthcare security and management. I want to help protect important information, especially in healthcare, and be part of making systems safer and more organized.</p>
-					<p>I also want to continue growing as a student and gain more experience that will help me in my future career.</p>
-				</div>
-				<a href="#four" class="goto-next scrolly">Next</a>
-			</section>
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
 
-			<section id="four" class="wrapper style1 special fade-up">
-				<div class="container">
-					<header class="major">
-						<h2>Skills and Qualities</h2>
-						<p>Some things that describe me</p>
-					</header>
-					<div class="box alt">
-						<div class="row gtr-uniform">
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Student</h3>
-								<p>I am focused on learning and improving every year.</p>
-							</section>
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Security Interest</h3>
-								<p>I am interested in cybersecurity and healthcare security.</p>
-							</section>
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Problem Solving</h3>
-								<p>I like solving problems and learning how systems work.</p>
-							</section>
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Management</h3>
-								<p>I am also interested in leadership, organization, and management.</p>
-							</section>
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Growth</h3>
-								<p>I always want to keep growing and doing better.</p>
-							</section>
-							<section class="col-4 col-6-medium col-12-xsmall">
-								<h3>Future Career</h3>
-								<p>I want a career where I can make a difference through technology and security.</p>
-							</section>
-						</div>
-					</div>
-				</div>
-			</section>
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 20;
+      padding: 1.7rem 2.4rem;
+      color: var(--text);
+      mix-blend-mode: screen;
+    }
 
-			<section class="wrapper style2 special fade">
-				<div class="container">
-					<header>
-						<h2>Contact Me</h2>
-						<p>You can send me a message here.</p>
-					</header>
-					<form action="https://formspree.io/f/mjgeanye" method="POST">
-						<label>Your email:</label>
-						<input type="email" name="email" />
+    .nav {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: start;
+      gap: 1rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.01em;
+    }
 
-						<label>Your message:</label>
-						<textarea name="message"></textarea>
+    .nav-left,
+    .nav-right {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
 
-						<br />
-						<button type="submit">Send</button>
-					</form>
-				</div>
-			</section>
+    .nav-right {
+      justify-content: flex-end;
+    }
 
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; James Perez-Moran</li>
-				</ul>
-			</footer>
+    .brand {
+      text-align: center;
+      line-height: 1.05;
+    }
 
-		</div>
+    .brand h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
 
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+    .brand span {
+      font-size: 0.7rem;
+      opacity: 0.9;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
 
-	</body>
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      background: #d9d5cb;
+    }
+
+    .hero-panel {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-panel.left img {
+      object-position: center;
+      filter: brightness(0.78);
+    }
+
+    .hero-panel.right img {
+      object-position: center top;
+      filter: brightness(0.88);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      color: var(--text);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.16), rgba(0,0,0,0.15));
+    }
+
+    .hero-content {
+      max-width: 560px;
+      margin-top: 4rem;
+    }
+
+    .hero-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+      font-weight: 600;
+      line-height: 0.95;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      max-width: 420px;
+      margin: 0 auto 1.8rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 170px;
+      padding: 0.8rem 1.3rem;
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+      font-size: 0.92rem;
+      transition: 0.25s ease;
+      background: transparent;
+    }
+
+    .hero-btn:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    section {
+      padding: 7rem 8vw;
+    }
+
+    .section-heading {
+      margin-bottom: 3rem;
+      max-width: 700px;
+    }
+
+    .section-heading .eyebrow {
+      display: block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--soft-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-heading h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      line-height: 0.95;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .section-heading p {
+      max-width: 620px;
+      color: #5b574f;
+      font-size: 1rem;
+    }
+
+    .about-layout,
+    .goals-layout,
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: stretch;
+    }
+
+    .editorial-image {
+      min-height: 520px;
+      overflow: hidden;
+      background: #ddd7cc;
+    }
+
+    .editorial-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+
+    .text-block h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .text-block p {
+      color: #524f48;
+      margin-bottom: 1rem;
+      max-width: 560px;
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.4rem;
+    }
+
+    .interest-card {
+      background: #efeae2;
+    }
+
+    .interest-card img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+
+    .interest-copy {
+      padding: 1.4rem 0.2rem 0;
+    }
+
+    .interest-copy h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+    }
+
+    .interest-copy p {
+      color: #5c574f;
+      font-size: 0.97rem;
+      max-width: 95%;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem 2rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d8d1c5;
+    }
+
+    .skills-list div {
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #ddd6ca;
+    }
+
+    .skills-list h5 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+
+    .skills-list p {
+      color: #635f57;
+      font-size: 0.95rem;
+    }
+
+    .contact-panel {
+      background: #ede8de;
+      padding: 2.2rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid #cfc8bc;
+      background: transparent;
+      padding: 1rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.98rem;
+      color: #1d1d1b;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.95rem 1.3rem;
+      background: #1f1f1d;
+      color: #f8f6f1;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: 0.25s ease;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      padding: 2.4rem 8vw 3rem;
+      background: #e7e0d5;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      color: #575248;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .about-layout,
+      .goals-layout,
+      .contact-layout,
+      .interests-grid,
+      .skills-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-panel {
+        min-height: 50vh;
+      }
+
+      .site-header {
+        padding: 1.2rem 1.2rem;
+      }
+
+      .nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .nav-left,
+      .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        order: -1;
+      }
+
+      section {
+        padding: 5rem 1.4rem;
+      }
+
+      footer {
+        padding: 2rem 1.4rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+      </div>
+
+      <div class="brand">
+        <h1>JAMES</h1>
+        <span>Perez-Moran</span>
+      </div>
+
+      <div class="nav-right">
+        <a href="#contact">Contact</a>
+        <a href="#goals">Goals</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-panel left">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80" alt="Technology workspace" />
+      </div>
+
+      <div class="hero-panel right">
+      </div>
+
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h2>Focused. Driven. Future Ready.</h2>
+          <p>
+            I’m James Perez Moran, an Information Science student with interests in cybersecurity, healthcare security, and management. I want to build secure systems that make a real difference.
+          </p>
+          <a href="#about" class="hero-btn">Discover more</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-heading">
+        <span class="eyebrow">About Me</span>
+        <h3>Technology, purpose, and growth.</h3>
+        <p>
+          I’m a Michigan State University student building my path in security and technology with a strong interest in helping people through better systems and better protection.
+        </p>
+      </div>
+
+      <div class="about-layout">
+        <div class="text-block">
+          <h4>My background</h4>
+          <p>
+            I study Information Science and I’m especially interested in areas where technology, security, and management come together. I want to keep learning how strong systems are built, protected, and improved.
+          </p>
+          <p>
+            What stands out to me most is using technology with purpose. I’m not only interested in how systems work, but also in how they can support people in real environments like healthcare and professional organizations.
+          </p>
+        </div>
+
+        <div class="editorial-image">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=80" alt="Laptop and coding workspace" />
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="section-heading">
+        <span class="eyebrow">Interests</span>
+        <h3>What I want to build my career around.</h3>
+        <p>
+          These are the spaces that continue to motivate me as I grow professionally and academically.
+        </p>
+      </div>
+
+      <div class="interests-grid">
+        <article class="interest-card">
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="Cybersecurity visual" />
+          <div class="interest-copy">
+            <h4>Cybersecurity</h4>
+            <p>I want to better understand how to protect networks, systems, and information from threats in real world settings.</p>
+          </div>
+        </article>
+
+        <article class="interest-card">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="Healthcare environment" />
+          <div class="interest-copy">
+            <h4>Healthcare Security</h4>
+            <p>I’m interested in protecting sensitive healthcare information and understanding how security supports patient care and trust.</p>
+          </div>
+        </article>
+
+        <article class="interest-card">
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80" alt="Management planning" />
+          <div class="interest-copy">
+            <h4>Management</h4>
+            <p>I also care about organization, leadership, and how well managed systems can improve both security and performance.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="goals">
+      <div class="section-heading">
+        <span class="eyebrow">Goals</span>
+        <h3>A career built on security and impact.</h3>
+        <p>
+          My goal is to turn what I’m learning now into meaningful professional experience and long-term growth.
+        </p>
+      </div>
+
+      <div class="goals-layout">
+        <div class="editorial-image">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80" alt="Students working together" />
+        </div>
+
+        <div class="text-block">
+          <h4>Where I’m headed</h4>
+          <p>
+            I want to build a career in cybersecurity or healthcare security and management. I’m interested in doing work that protects important information while also helping organizations run more effectively.
+          </p>
+          <p>
+            I also want to keep improving my technical knowledge, gain more hands-on experience, and continue growing into someone who can contribute both on the security side and the people side of technology.
+          </p>
+
+          <div class="skills-list">
+            <div>
+              <h5>Problem Solving</h5>
+              <p>I enjoy learning how systems work and identifying ways to improve them.</p>
+            </div>
+            <div>
+              <h5>Growth</h5>
+              <p>I’m focused on building stronger technical and professional skills over time.</p>
+            </div>
+            <div>
+              <h5>Security Mindset</h5>
+              <p>I care about protecting data, systems, and people in digital spaces.</p>
+            </div>
+            <div>
+              <h5>Purpose</h5>
+              <p>I want my future work to have value beyond just the technical side.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-heading">
+        <span class="eyebrow">Contact</span>
+        <h3>Let’s connect.</h3>
+        <p>
+          Whether it’s an opportunity, a connection, or just a message, feel free to reach out.
+        </p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="text-block">
+          <h4>Get in touch</h4>
+          <p>
+            This site is a reflection of where I am now and where I want to go. You can use the form to contact me, and you can also connect with me through LinkedIn or GitHub in the footer.
+          </p>
+          <p>  
+          </p>
+        </div>
+
+        <div class="contact-panel">
+          <form action="https://formspree.io/f/mjgeanye" method="POST">
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 James Perez Moran</div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/james-perez-moran-a595433a4/" target="_blank">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+</body>
 </html>
